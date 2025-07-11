@@ -22,7 +22,9 @@ interface Citation {
   paragraph?: string;  // Paragraph reference (e.g., "Para 7")
   page?: number;       // Page number
 }
-2. PDF Content Mapping
+
+
+- 2. PDF Content Mapping
 The system uses a mock PDF content structure that maps the actual PDF content:
 
 
@@ -34,7 +36,9 @@ const pdfContent = {
     }
   }
 };
-3. Intelligent Query Processing
+
+
+- 3. Intelligent Query Processing
 The researchPDF() function analyzes user queries and matches them to relevant PDF content:
 
 
@@ -59,7 +63,9 @@ const researchPDF = (query: string): { answer: string; citations: Citation[] } =
     };
   }
 };
-4. Citation Display & Interaction
+
+
+- 4. Citation Display & Interaction
 Citations are rendered as interactive cards below each AI response:
 
 
@@ -76,7 +82,9 @@ Citations are rendered as interactive cards below each AI response:
     </button>
   </div>
 ))}
-5. PDF Modal Implementation
+
+        
+- 5. PDF Modal Implementation
 When a citation is clicked, it opens a modal with the PDF:
 
 
@@ -85,7 +93,10 @@ const handleCitationClick = (citation: Citation) => {
   setCurrentParagraph(citation.paragraph);   // Set paragraph reference
   setShowPdfViewer(true);                   // Show modal
 };
-6. Modal PDF Viewer
+
+
+
+- 6. Modal PDF Viewer
 The modal displays the PDF with context about which paragraph is being referenced:
 
 
